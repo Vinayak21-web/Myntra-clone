@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #cddb70, #094248, #21a8ba);
+  background-size: 600% 600%;
+  animation: gradientFlow 15s ease infinite;
+  color: #fff;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fcfbfb;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: #fcfbfb;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.banner {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.banner h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.banner p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+.product {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 20px;
+  width: 220px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.product:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.product p {
+  font-size: 18px;
+  color: #f27f7f;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
+  font-size: 14px;
+  color: #fff;
+}
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}.back-btn {
+  display: inline-block;
+  margin: 20px;
+  padding: 8px 14px;
+  background-color: #ff3e6c;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #e7335e;
+  transform: translateX(-4px);
+}nav a:nth-child(1):hover { color: rgb(248, 11, 15); text-shadow: 0 0 10px rgb(212, 138, 10); } /* Men */
+nav a:nth-child(2):hover { color: #f0f; text-shadow: 0 0 10px #f0f; } /* Women */
+nav a:nth-child(3):hover { color: #0f0; text-shadow: 0 0 10px rgb(17, 202, 17); } /* Kids */
+nav a:nth-child(4):hover { color: #ff0; text-shadow: 0 0 10px #ff0; } /* Home & Living */
+nav a:nth-child(5):hover { color: #f80; text-shadow: 0 0 10px #f80; } /* Beauty */
+/* Basic Reset */
+.search-cart {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.search-cart input {
+  padding: 10px 16px;
+  width: 180px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  transition: all 0.4s ease;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+.search-cart input:focus {
+  width: 250px;
+  border-color: #ff3e6c;
+  background-color: white;
+  box-shadow: 0 0 8px rgba(255, 62, 108, 0.3);
+  outline: none;
+}
+
+/* Optional hover effect */
+.search-cart input:hover {
+  border-color: #0dc5d2;
+}
+
+/* Cart Icon Styling */
+.cart-icon {
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+  transform: scale(1.1);
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+  animation: pop 0.3s ease;
+}
+
+/* Animation for cart count (optional) */
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+/* Styling for the Myntra heading */
+.logo {
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(17, 16, 15);
+  text-align: center;
+  text-shadow: 
+    0 0 5px #f71010, 
+    0 0 10px #eb0d0d, 
+    0 0 15px hsl(0, 97%, 35%), 
+    0 0 20px #c20303;
+  animation: glow 0.1s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 
+      0 0 5px #4007dd, 
+      0 0 10px #1607e3, 
+      0 0 15px #2809b4, 
+      0 0 20px #2f09ec;
+  }
+  100% {
+    text-shadow: 
+      0 0 10px #0d430d, S
+      0 0 20px #114819, 
+      0 0 30px #134e12, 
+      0 0 40px #177810;
+  }
+}
+.login-box {
+  margin-left: 10px;
+}
+
+.login-btn {
+  padding: 8px 16px;
+  background-color: #0db2f8;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #f90e0e;
+}

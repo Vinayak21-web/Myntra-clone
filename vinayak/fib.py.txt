@@ -1,0 +1,6 @@
+#fibonacci numbers upto a given number
+f1=0;f2=1
+n=int(input("upto which number u want to generate fib number")
+while(f1<=n):
+	print(f1)
+	f3=f1+f2;f1=f2=f2=f3

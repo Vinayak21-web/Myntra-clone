@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  background: radial-gradient(ellipse at center, #0f0c29, #302b63, #24243e);
+  background-size: 200% 200%;
+  animation: neonBG 10s ease infinite;
+  color: #fff;
+}
+
+@keyframes neonBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid #00f0ff;
+  box-shadow: 0 0 15px #00f0ff;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00f0ff;
+  text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff;
+}
+
+.banner {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.banner h1 {
+  font-size: 48px;
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.banner p {
+  font-size: 24px;
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  margin-top: 15px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+  }
+  to {
+    text-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff;
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+.product {
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid #00f0ff;
+  padding: 20px;
+  border-radius: 20px;
+  width: 220px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px #00f0ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00f0ff, 0 0 35px #ff00ff;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px #fff;
+}
+
+.product h3 {
+  font-size: 20px;
+  color: #00f0ff;
+  text-shadow: 0 0 5px #00f0ff;
+}
+
+.product p {
+  font-size: 18px;
+  color: #ff00ff;
+  font-weight: bold;
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  color: #00f0ff;
+  font-size: 14px;
+  box-shadow: 0 0 10px #00f0ff;
+}
